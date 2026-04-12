@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button data-target="home">Home</button></li>
+                <li><button data-target="campanha">Campanha</button></li>
+                <li><button data-target="depoimentos">Depoimentos</button></li>
+                <li><button data-target="apoio">Apoio</button></li>
+                <button id="toggleTema">☀️</button>
+            </ul>
+
+        </nav>
+
+    </header>
+    <main class="container">
+
+        <section id="home">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rainbow"
+                    viewBox="0 0 16 16">
+
+                    <path
+                        d="M8 4.5a7 7 0 0 0-7 7 .5.5 0 0 1-1 0 8 8 0 1 1 16 0 .5.5 0 0 1-1 0 7 7 0 0 0-7-7m0 2a5 5 0 0 0-5 5 .5.5 0 0 1-1 0 6 6 0 1 1 12 0 .5.5 0 0 1-1 0 5 5 0 0 0-5-5m0 2a3 3 0 0 0-3 3 .5.5 0 0 1-1 0 4 4 0 1 1 8 0 .5.5 0 0 1-1 0 3 3 0 0 0-3-3m0 2a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 4 0 .5.5 0 0 1-1 0 1 1 0 0 0-1-1" />
+                </svg>
+                <h2>
+                    Refugio Arco-Íris
+                </h2>
+            </div>
+            <div>
+                <p class="slogan">
+                    Nenhum lar deveria rejeitar quem você é
+                </p>
+                <p class="descricao">
+                    Milhares de jovens LGBTQIA+ enfrentam o abandono familiar todos os dias. Juntos, podemos mudar essa
+                    realidade.
+                </p>
+            </div>
+            <button data-target="apoio">
+                Apoiar a campanha
+            </button>
+            <button>
+                Saiba mais
+            </button>
+        </section>
+        <section id="contexto">
+            <div>
+                <h1>
+                    O Problema que Precisamos Enfrentar
+                </h1>
+                <p class="descricao">
+                    A realidade de jovens LGBTQIA+ expulsos de casa
+                </p>
+            </div>
+            <div class="caixa_texto">
+                <div class="square_pink">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house" viewBox="0 0 16 16">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                    </svg>
+                </div>
+                <h3>
+                    Abandono e Rejeição
+                </h3>
+                <p>
+                    Muitos jovens são expulsos de casa ao assumirem sua identidade, enfrentando discriminação dentro do
+                    próprio lar.
+                </p>
+            </div>
+            <div class="caixa_texto">
+                <div class="square_purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                    </svg>
+                </div>
+                <h3>
+                    Vulnerabilidade Social
+                </h3>
+                <p>
+                    Sem apoio familiar, ficam expostos a situações de rua, exploração e falta de acesso a educação.
+                </p>
+            </div>
+            <div class="caixa_texto">
+                <div class="square_blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    </svg>
+                </div>
+                <h3>
+                    Impacto Emocional
+                </h3>
+                <p>
+                    O abandono gera traumas profundos, afetando a saúde mental em um momento crucial de suas vidas.
+                </p>
+            </div>
+            <div id="caixa_dados">
+                <h1>
+                    40%
+                </h1>
+                <p>
+                    dos jovens em situação de rua são LGBTQIA+
+                </p>
+            </div>
+        </section>
+        <section id="campanha">
+
+            <div class="container">
+
+                <div class="campanha-topo">
+                    <div class="texto">
+                        <h2 id="titulo">Nossa Campanha</h2>
+                        <p id="subtitulo">Como vamos fazer a diferença</p>
+                    </div>
+                </div>
+
+                <div class="campanha-cards">
+
+                    <div class="card">
+                        <div class="square_pink">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-bullseye" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12" />
+                                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8" />
+                                <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                            </svg>
+                        </div>
+                        <h3>Conscientização</h3>
+                        <p>Educar a sociedade sobre os impactos do abandono familiar</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="square_purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-megaphone" viewBox="0 0 16 16">
+                                <path
+                                    d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z" />
+                            </svg>
+                        </div>
+                        <h3>Visibilidade</h3>
+                        <p>Dar voz às histórias reais de jovens que enfrentam essa realidade</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="square_blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
+                            </svg>
+                        </div>
+                        <h3>Apoio</h3>
+                        <p>Conectar jovens a recursos e redes de apoio</p>
+                    </div>
+
+                </div>
+
+                <div class="comunicacao-bloco">
+
+                    <h2>Como vamos comunicar</h2>
+
+                    <div class="comunicacao">
+
+                        <div class="item">
+                           
+                            <h3>Redes Sociais</h3>
+                            <p>Compartilhamento de histórias e mensagens em todas as plataformas</p>
+                        </div>
+
+                        <div class="item">
+                           
+                            <h3>Parcerias</h3>
+                            <p>Colaboração com ONGs e organizações de direitos humanos</p>
+                        </div>
+
+                        <div class="item">
+                        
+                            <h3>Eventos</h3>
+                            <p>Palestras e ações presenciais para engajar a comunidade</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section id="depoimentos">
+            <div class="carrossel-container">
+
+                <button class="btn prev">&#10094;</button>
+
+                <div class="conteudo">
+                    <h2 class="titulo">Histórias Reais</h2>
+                    <p class="subtitulo">Depoimentos de jovens que enfrentaram o abandono familiar</p>
+
+                    <div class="carrossel">
+
+                        <div class="card">
+                            <img src="./img/imagem_Lucas.jpg">
+                            <h3>Lucas, 22 anos</h3>
+                            <p class="local">São Paulo, SP</p>
+                            <p>"Quando assumi que era gay, meus pais me deram uma semana para sair de casa. Foi o
+                                momento mais difícil da minha vida. Hoje, com ajuda de amigos e organizações, estou
+                                reconstruindo minha vida." </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="./img/imagem_AnaPaula.jpg">
+                            <h3>Ana Paula, 21 anos</h3>
+                            <p class="local">Salvador, BA</p>
+                            <p> "Ser expulsa de casa aos 17 anos por ser lésbica me fez crescer muito rápido. Tive que
+                                abandonar a escola, mas nunca abandonei meus sonhos. Esta campanha é importante." </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="./img/imagem_Julio.jpg">
+                            <h3>Júlio, 20 anos</h3>
+                            <p class="local">Belo Horizonte, MG</p>
+                            <p>"Assumir minha identidade trans custou meu lar. A rejeição familiar dói mais que qualquer
+                                outra coisa. Mas encontrei uma nova família na comunidade LGBTQIA+." </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="./img/imagem_Juliana.jpg">
+                            <h3>Juliana, 22 anos</h3>
+                            <p class="local">Salvador, BA</p>
+                            <p>"Minha mãe sempre dizia que era 'fase', até o dia em que eu levei uma namorada em casa.
+                                Depois disso, tudo mudou. Fui expulsa e tive que aprender a me virar muito cedo. No
+                                Refugio Arco-Íris, eu encontrei acolhimento e pessoas que me ajudaram a continuar
+                                estudando e acreditando em mim." </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="./img/imagem_Rafael.jpg">
+                            <h3>Rafael, 19 anos</h3>
+                            <p class="local">Recife, PE</p>
+                            <p>"Quando meu pai descobriu que eu era gay, disse que eu não fazia mais parte da família
+                                dele. Saí de casa com uma mochila e nenhum plano. Passei um tempo dormindo na casa de
+                                amigos até conhecer o Refugio Arco-Íris. Foi a primeira vez que eu senti que não
+                                precisava esconder quem eu sou para ser aceito." </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="btn next">&#10095;</button>
+
+            </div>
+        </section>
+        <section id="apoio">
+            <div id="caixa_especial">
+                <h2>
+                    Faça Parte dessa mudança
+                </h2>
+                <p>
+                    Sua voz e seu apoio podem transformar a vida de milhares de jovens.
+                </p>
+                <a href="https://www.casaum.org/doe/" class="btn-acao">Apoiar agora</a>
+                <a href="" class="btn-acao">Compartilhar</a>
+            </div>
+            <div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                </svg>
+
+                <h3>
+                    Compartilhe
+                </h3>
+                <p>
+                    Divulgue a campanha nas suas redes sociais
+                </p>
+            </div>
+            <div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105" />
+                </svg>
+
+                <h3>
+                    Converse
+                </h3>
+                <p>
+                    Dialogue sobre a importância da aceitação
+                </p>
+            </div>
+            <div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105" />
+                </svg>
+
+                <h3>
+                    Doe
+                </h3>
+                <p>
+                    Contribua com organizações de apoio
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
