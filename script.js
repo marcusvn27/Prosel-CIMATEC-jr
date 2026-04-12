@@ -112,6 +112,4 @@ document.addEventListener("DOMContentLoaded", () => {
             iframe.src = iframe.src;
         });
     }
-    /*=================APOIAR A CAMPANHA (HOME)====================*/
-    
 });
