@@ -75,3 +75,17 @@ botao.addEventListener("click", () => {
         ? "🌙"
         : "☀️";
 });
+
+const botaoCompartilhar = document.getElementById("btnCompartilhar");
+const popup = document.getElementById("popupCopiado");
+
+botaoCompartilhar.addEventListener("click", () => {
+
+    navigator.clipboard.writeText(window.location.href);
+
+    popup.classList.add("ativo");
+
+    setTimeout(() => {
+        popup.classList.remove("ativo");
+    }, 2000);
+});

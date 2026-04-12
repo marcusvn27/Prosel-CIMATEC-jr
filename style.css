@@ -379,6 +379,27 @@ button {
     height: 140px;
 }
 
+#popupCopiado {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    
+    background: #9e62ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.4s ease;
+}
+
+#popupCopiado.ativo {
+    opacity: 1 !important;
+    transform: translateX(-50%) translateY(0);
+}
 
 body.dark {
     background: #121212;
@@ -400,7 +421,6 @@ body.dark #campanha .item{
     color: #000;
 }
 
-/* seções */
 body.dark #contexto{
     background: #1e1e1e;
 }
