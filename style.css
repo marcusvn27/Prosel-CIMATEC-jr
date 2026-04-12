@@ -123,12 +123,27 @@ button {
     color: white;
 }
 
-/* COMUNICAÇÃO */
 .comunicacao {
     display: flex;
-    justify-content: center;
     gap: 20px;
-    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+
+    .comunicacao {
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden; 
+    }
+
+    .comunicacao .item {
+        width: 90%;
+        max-width: 300px;
+    }
 }
 
 .comunicacao .item {
@@ -136,6 +151,7 @@ button {
     padding: 20px;
     border-radius: 12px;
     width: 250px;
+    
 }
 
 /* CAMPANHA */
@@ -218,6 +234,10 @@ button {
     text-align: center;
 }
 
+#depoimentos p{
+    margin-top: 10px;
+}
+
 /* CARROSSEL */
 .carrossel-container {
     display: flex;
@@ -230,6 +250,7 @@ button {
 .conteudo {
     max-width: 900px;
     width: 100%;
+
 }
 
 .carrossel {
@@ -237,6 +258,7 @@ button {
     overflow: hidden;
     width: 900px;
     align-items: stretch;
+    margin-top: 20px;
 }
 
 /* CARD */
@@ -305,7 +327,6 @@ button {
     right: -10px;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
 
     .carrossel {
@@ -338,11 +359,11 @@ button {
 #caixa_especial {
     background: #a032d3cc;
     color: white;
-    padding: 70px;
+    padding: 40px 20px;
     border-radius: 10px;
     max-width: 1000px;
     margin: 40px auto;
-    height: 250px;
+    height: auto;
     border: 1px solid #000;
 }
 
@@ -466,3 +487,15 @@ body.dark nav button{
     color: #000;
 }
 
+@media (max-width: 768px) {
+
+    nav ul {
+        gap: 6px; /* espaço entre botões */
+    }
+
+    nav button {
+        font-size: 13px;  
+        padding: 4px 6px;    
+    }
+
+}
