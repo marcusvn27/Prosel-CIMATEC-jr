@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ================= MENU ================= */
-    const navButtons = document.querySelectorAll("nav button");
+    const navButtons = document.querySelectorAll("[data-target]");
 
     navButtons.forEach(button => {
         button.addEventListener("click", function () {
@@ -89,19 +89,19 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ================= MODAL ================= */
     const modal = document.getElementById("modalVideo");
     const btnSaibaMais = document.getElementById("btnModal");
-   const fechar = document.querySelector(".fechar");
+    const fechar = document.querySelector(".fechar");
 
     if (modal && btnSaibaMais && fechar) {
 
         btnSaibaMais.addEventListener("click", () => {
-            modal.classList.add("ativo"); /* 🔥 melhor que display */
+            modal.classList.add("ativo");
         });
 
         fechar.addEventListener("click", () => {
             modal.classList.remove("ativo");
 
             const iframe = modal.querySelector("iframe");
-    iframe.src = iframe.src; // reinicia o vídeo
+            iframe.src = iframe.src;
         });
 
         modal.addEventListener("click", (e) => {
@@ -109,8 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 modal.classList.remove("ativo");
             }
             const iframe = modal.querySelector("iframe");
-    iframe.src = iframe.src; // reinicia o vídeo
+            iframe.src = iframe.src;
         });
     }
-
+    /*=================APOIAR A CAMPANHA (HOME)====================*/
+    
 });
