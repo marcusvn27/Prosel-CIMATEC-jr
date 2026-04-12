@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const buttons = document.querySelectorAll("nav button");
+    /* ================= MENU ================= */
+    const navButtons = document.querySelectorAll("nav button");
 
-    buttons.forEach(button => {
+    navButtons.forEach(button => {
         button.addEventListener("click", function () {
-
             const targetId = this.getAttribute("data-target");
             const section = document.getElementById(targetId);
 
@@ -13,79 +13,104 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: section.offsetTop - 80,
                     behavior: "smooth"
                 });
-            } else {
-                console.log("Seção não encontrada:", targetId);
             }
-
         });
     });
 
-});
-const carrossel = document.querySelector('.carrossel');
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
 
-let scroll = 0;
-const larguraCard = 300;
+    /* ================= CARROSSEL ================= */
+    const carrossel = document.querySelector('.carrossel');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
 
-next.addEventListener('click', () => {
-    scroll += larguraCard;
+    let scroll = 0;
+    const larguraCard = 300;
 
-    if (scroll > carrossel.scrollWidth - carrossel.clientWidth) {
-        scroll = carrossel.scrollWidth - carrossel.clientWidth;
-    }
+    if (carrossel && next && prev) {
 
-    carrossel.scrollTo({
-        left: scroll,
-        behavior: 'smooth'
-    });
-});
+        next.addEventListener('click', () => {
+            scroll += larguraCard;
 
-prev.addEventListener('click', () => {
-    scroll -= larguraCard;
+            if (scroll > carrossel.scrollWidth - carrossel.clientWidth) {
+                scroll = carrossel.scrollWidth - carrossel.clientWidth;
+            }
 
-    if (scroll < 0) scroll = 0;
-
-    carrossel.scrollTo({
-        left: scroll,
-        behavior: 'smooth'
-    });
-});
-
-document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', function () {
-        const targetId = this.getAttribute('data-target');
-        const section = document.getElementById(targetId);
-
-        if (section) {
-            window.scrollTo({
-                top: section.offsetTop - 80,
+            carrossel.scrollTo({
+                left: scroll,
                 behavior: 'smooth'
             });
-        }
-    });
-});
+        });
 
-const botao = document.getElementById("toggleTema");
+        prev.addEventListener('click', () => {
+            scroll -= larguraCard;
 
-botao.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+            if (scroll < 0) scroll = 0;
 
-    botao.textContent = document.body.classList.contains("dark")
-        ? "🌙"
-        : "☀️";
-});
+            carrossel.scrollTo({
+                left: scroll,
+                behavior: 'smooth'
+            });
+        });
+    }
 
-const botaoCompartilhar = document.getElementById("btnCompartilhar");
-const popup = document.getElementById("popupCopiado");
 
-botaoCompartilhar.addEventListener("click", () => {
+    /* ================= TEMA ================= */
+    const botaoTema = document.getElementById("toggleTema");
 
-    navigator.clipboard.writeText(window.location.href);
+    if (botaoTema) {
+        botaoTema.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
 
-    popup.classList.add("ativo");
+            botaoTema.textContent = document.body.classList.contains("dark")
+                ? "🌙"
+                : "☀️";
+        });
+    }
 
-    setTimeout(() => {
-        popup.classList.remove("ativo");
-    }, 2000);
+
+    /* ================= COMPARTILHAR ================= */
+    const botaoCompartilhar = document.getElementById("btnCompartilhar");
+    const popup = document.getElementById("popupCopiado");
+
+    if (botaoCompartilhar && popup) {
+        botaoCompartilhar.addEventListener("click", () => {
+
+            navigator.clipboard.writeText(window.location.href);
+
+            popup.classList.add("ativo");
+
+            setTimeout(() => {
+                popup.classList.remove("ativo");
+            }, 2000);
+        });
+    }
+
+
+    /* ================= MODAL ================= */
+    const modal = document.getElementById("modalVideo");
+    const btnSaibaMais = document.getElementById("btnModal");
+   const fechar = document.querySelector(".fechar");
+
+    if (modal && btnSaibaMais && fechar) {
+
+        btnSaibaMais.addEventListener("click", () => {
+            modal.classList.add("ativo"); /* 🔥 melhor que display */
+        });
+
+        fechar.addEventListener("click", () => {
+            modal.classList.remove("ativo");
+
+            const iframe = modal.querySelector("iframe");
+    iframe.src = iframe.src; // reinicia o vídeo
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("ativo");
+            }
+            const iframe = modal.querySelector("iframe");
+    iframe.src = iframe.src; // reinicia o vídeo
+        });
+    }
+
 });
